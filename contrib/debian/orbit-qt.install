@@ -1,0 +1,6 @@
+usr/local/bin/orbit-qt usr/bin
+share/pixmaps/orbit32.xpm usr/share/pixmaps
+share/pixmaps/orbit16.xpm usr/share/pixmaps
+share/pixmaps/orbit128.png usr/share/pixmaps
+debian/orbit-qt.desktop usr/share/applications
+debian/orbit-qt.protocol usr/share/kde4/services/

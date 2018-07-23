@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Orbit
+Comment=Orbit P2P Cryptocurrency
+Comment[fr]=Orbit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Orbit, eşten eşe kriptografik sanal para birimi
+Exec=orbit-qt %u
+Terminal=false
+Type=Application
+Icon=orbit128
+MimeType=x-scheme-handler/orbit;
+Categories=Office;Finance;
