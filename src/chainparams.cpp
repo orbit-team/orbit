@@ -112,9 +112,9 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xbf;
-        pchMessageStart[1] = 0x0c;
-        pchMessageStart[2] = 0x6b;
+        pchMessageStart[0] = 0xfb;
+        pchMessageStart[1] = 0xc0;
+        pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("04398a6d5ad6e5757d60996ed8311c7c859d3951dd0908018a37d1625e256962569a9d9ed1557f8a29df49e5b6b757f0c4af2a952d8e05d16e031eb7de6d1e5550");
         nDefaultPort = 9449;
@@ -123,6 +123,8 @@ public:
 
         genesis = CreateGenesisBlock(1532538000, 671204, 0x1e0ffff0, 1, 150 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
+		printf("consensus.hashGenesisBlock = %s\n", genesis.GetHash().ToString().c_str());
+        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x000009c1bb6c2e4838096757d80b8d3964afb53b9481a2611122213d29c60d01"));
         assert(genesis.hashMerkleRoot == uint256S("0xc2ad0523a8b55090ef6aa2648be2155b08cf68ba59d00eec212793aeeb363efb"));
 
@@ -212,9 +214,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1456790400; // March 1st, 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1493596800; // May 1st, 2017
 
-        pchMessageStart[0] = 0xec;
-        pchMessageStart[1] = 0x2e;
-        pchMessageStart[2] = 0xac;
+        pchMessageStart[0] = 0xce;
+        pchMessageStart[1] = 0xe2;
+        pchMessageStart[2] = 0xca;
         pchMessageStart[3] = 0xff;
         vAlertPubKey = ParseHex("04235c15bfbe238cdb0261ceb60f14cf30f21e64858944a4702f6902619f65065cd754870a82026ec6dafb185116bce135546ccb65997a39e2c94ea87e80dec99d");
         nDefaultPort = 19449;
@@ -308,10 +310,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
 
-        pchMessageStart[0] = 0xcf;
-        pchMessageStart[1] = 0x1c;
-        pchMessageStart[2] = 0x7b;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xfc;
+        pchMessageStart[1] = 0xc1;
+        pchMessageStart[2] = 0xb7;
+        pchMessageStart[3] = 0xcd;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDefaultPort = 19444;
         nPruneAfterHeight = 1000;
