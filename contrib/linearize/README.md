@@ -28,7 +28,7 @@ output.
 
 Optional config file setting for linearize-data:
 * "netmagic": network magic number (default is 'cee2caff', testnet)
-* "genesis": genesis block hash (default is '00000c4dc14a785772e2963a49d54ed1bf7070ff24c3585564abfb79d6d4cc99', testnet)
+* "genesis": genesis block hash (default is '00000c96ba6e57cce1273747c3010a65ca876e613bdaa2b432895a95c98f04f7', testnet)
 * "max_out_sz": maximum output file size (default 100 \* 1000 \* 1000)
 * "split_timestamp": Split files when a new month is first seen, in addition to
 reaching a maximum file size.
